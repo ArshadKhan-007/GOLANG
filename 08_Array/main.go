@@ -18,4 +18,12 @@ func main() {
 	fmt.Println(nums[0]) //Accessing array elements using index
 
 	fmt.Println(len(nums)) //len function returns the length of the array
+
+	num := [4]int{1, 2, 3, 4} //Array initialization with values
+	fmt.Println(num)
+
+	// 2-D Array
+	matrix := [2][2]int{{1, 2}, {3, 4}}
+	fmt.Println(matrix)
+
 }
