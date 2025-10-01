@@ -27,6 +27,7 @@ func main() {
 	elements = append(elements, 9)
 	elements = append(elements, 10)
 	elements = append(elements, 11) //When we append 11th element capacity is increased to double of current capacity
+	elements[0] = 100               //Modifying element at index 0
 	fmt.Println(elements)
 	fmt.Println(cap(elements)) //Capacity is increased to 10*2=20
 }
