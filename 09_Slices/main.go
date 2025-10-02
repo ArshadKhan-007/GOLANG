@@ -30,4 +30,16 @@ func main() {
 	elements[0] = 100               //Modifying element at index 0
 	fmt.Println(elements)
 	fmt.Println(cap(elements)) //Capacity is increased to 10*2=20
+
+	//Copy Function
+	var values = make([]int, 0, 10)
+	values = append(values, 1) //Appending elements to values slice
+	var source = make([]int, len(values))
+
+	copy(source, values) //Copying elements from elements slice to source slice
+	fmt.Println(values, source)
+
+	//Slice Operations
+	var data = []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	fmt.Println(data[0:2]) //Slicing from index 0 to 2 (2 is exclusive)
 }
