@@ -42,4 +42,10 @@ func main() {
 	//Slice Operations
 	var data = []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	fmt.Println(data[0:2]) //Slicing from index 0 to 2 (2 is exclusive)
+
+	var Data = []int{1, 2, 3, 4, 5}
+	fmt.Println(Data[:1]) //Slicing from start to index 1 (1 is exclusive)
+	fmt.Println(Data[1:]) //Slicing from index 1 to end
+	fmt.Println(Data[:])  //Slicing the whole slice
+
 }
