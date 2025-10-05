@@ -50,6 +50,6 @@ func main() {
 	m2 := map[string]int{"price": 30, "phone": 10}
 	m3 := map[string]int{"price": 30, "phone": 10}
 
-	fmt.Println(maps.Equal(m2, m3)) //Here, maps is
+	fmt.Println(maps.Equal(m2, m3)) //Here, maps is a package which provides various functions to work with maps
 
 }
