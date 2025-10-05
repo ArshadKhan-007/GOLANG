@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
 func main() {
-	//Slices is dynamic array
+	//Slice is dynamic array
 	var nums []int           //Uninitialized slice is nil
 	fmt.Println(nums == nil) //true
 	fmt.Println(len(nums))
@@ -47,5 +50,14 @@ func main() {
 	fmt.Println(Data[:1]) //Slicing from start to index 1 (1 is exclusive)
 	fmt.Println(Data[1:]) //Slicing from index 1 to end
 	fmt.Println(Data[:])  //Slicing the whole slice
+
+	var num1 = []int{1, 2, 3, 4}
+	var num2 = []int{1, 2, 3, 4}
+
+	fmt.Println(slices.Equal(num1, num2)) //Equals function to check if two slices are equal
+
+	//2D-Slice
+	matrix := [][]int{{1, 2}, {3, 4}}
+	fmt.Println(matrix)
 
 }
