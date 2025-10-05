@@ -30,4 +30,11 @@ func main() {
 		fmt.Println("Index:", index, "Character:", char)
 	}
 	// Here, range iterates over the string 'str'. In each iteration, 'index' holds the current index of the character, and 'char' holds the corresponding rune (character).
+
+	// Example with array
+	arr := [3]int{10, 20, 30}
+	for index, value := range arr {
+		fmt.Println("Index:", index, "Value:", value)
+	}
+	// Here, range iterates over the array 'arr'. In each iteration, 'index' holds the current index of the element, and 'value' holds the value of the element at that index.
 }
