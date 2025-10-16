@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+//This changeNum function is here to state without pointer the value of num in main will not change
+// It takes an integer as an argument and attempts to change its value to 5
+// However, this change does not affect the original variable in main
+// because integers are passed by value in Go
+func changeNum(num int) {
+	num = 5
+	fmt.Println("In changeNum", num)
+}
+
+// Pass by reference using pointers
+func changeNumByRef(val *int) {
+	*val = 5 // Dereference the pointer and change the value at that address to 5
+	fmt.Println("In changeNumByRef", *val)
+}
+
+func main() {
+	num := 1       // initial value of num is 1
+	changeNum(num) // call changeNum with num
+	// After calling changeNum, the value of num in main remains unchanged
+	fmt.Println("After change in main", num)
+
+	val := 1             // initial value of val is 1
+	changeNumByRef(&val) // call changeNumByRef with the address of val
+	// After calling changeNumByRef, the value of val in main is changed to 5
+	fmt.Println("After change in main", val)
+}
