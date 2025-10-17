@@ -27,4 +27,17 @@ func main() {
 	changeNumByRef(&val) // call changeNumByRef with the address of val
 	// After calling changeNumByRef, the value of val in main is changed to 5
 	fmt.Println("After change in main", val)
+
+	value := 10
+	ptr := &value
+	fmt.Println("Value:", value) // prints 10
+	fmt.Println("Pointer:", ptr) // prints the memory address of value
+
+	var valStr string
+	valStr = "Hello"
+	var ptrstr *string              // Here * indicates that ptrstr is a pointer to a string type
+	ptrstr = &valStr                // Assign the address of valStr to ptrstr
+	fmt.Println("Value:", valStr)   // prints "Hello"
+	fmt.Println("Pointer:", ptrstr) // prints the memory address of valStr
+
 }
