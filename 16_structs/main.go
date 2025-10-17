@@ -36,7 +36,7 @@ func main() {
 	} // we can have multiple instances of the same struct with different values.
 	// Make sure that we must provide different names for different structs instances.
 
-	o.changeAmount(999.99)
+	o.changeAmount(999.99) // Here, we are calling the `changeAmount` method on the `order` struct instance `o` to update its `amount` field.
 
 	// Changing struct fields
 	o.status = "Completed" // Here, we are updating the `status` field of the `order` struct instance `o`.
