@@ -22,8 +22,8 @@ type UserRole string
 
 const ( // Here, in const its upon you to assign explicit UserRole values it's recommended to explicit type for more type safety.
 	Admin    UserRole = "ADMIN"
-	Customer UserRole = "CUSTOMER"
-	Guest    UserRole = "GUEST"
+	Customer UserRole = "BUYER"
+	Guest    UserRole = "VISITOR"
 )
 
 func checkUserRole(role UserRole) {
