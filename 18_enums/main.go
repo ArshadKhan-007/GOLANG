@@ -18,13 +18,32 @@ const (
 	Cancelled
 )
 
+type UserRole string
+
+const ( // Here, in const its upon you to assign explicit UserRole values it's recommended to explicit type for more type safety.
+	Admin    UserRole = "ADMIN"
+	Customer UserRole = "CUSTOMER"
+	Guest    UserRole = "GUEST"
+)
+
+func checkUserRole(role UserRole) {
+	fmt.Println("User role", role)
+}
+
 func changeOrderStatus(status OrderStatus) {
 	fmt.Println("Order status", status)
 }
 
 func main() {
 	changeOrderStatus(Received)
+	changeOrderStatus(Confirmed)
 	changeOrderStatus(Shipped)
 	changeOrderStatus(Delivered)
 	changeOrderStatus(Cancelled)
+
+	fmt.Println("--------------------------------")
+
+	checkUserRole(Admin)
+	checkUserRole(Customer)
+	checkUserRole(Guest)
 }
