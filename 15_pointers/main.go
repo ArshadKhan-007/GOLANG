@@ -28,11 +28,17 @@ func main() {
 	// After calling changeNumByRef, the value of val in main is changed to 5
 	fmt.Println("After change in main", val)
 
+	// As you can see, here we haven't used * symbol
+	// Why we haven't use * symbol because we are not dereferencing the pointer
+	// We are just assigning the address of value to ptr
+	//
 	value := 10
 	ptr := &value
 	fmt.Println("Value:", value) // prints 10
 	fmt.Println("Pointer:", ptr) // prints the memory address of value
 
+	// Here, we have used * symbol to dereference the pointer and get the value at that address
+	//
 	var valStr string
 	valStr = "Hello"
 	var ptrstr *string              // Here * indicates that ptrstr is a pointer to a string type
