@@ -62,6 +62,7 @@ func main() {
 	// Receiving Channel
 	resultChannel := make(chan int)
 	go receiveData(resultChannel, 10, 20)
-	result := <-resultChannel
+	result := <-resultChannel // Here we receive the result from the channel
+	// But didn't use sleep here because the main goroutine is blocked waiting for the result from the channel, so it will wait until the receiveData function sends the result.
 	fmt.Println("Result is:", result)
 }
